@@ -11,6 +11,7 @@ export PGID=${PGID:-0}
 [ ! -d "/app/config" ] && ln -s /config /app/config
 
 export HOMEPAGE_BUILDTIME=$(date +%s)
+export NEXT_PUBLIC_BASE_PATH=${NEXT_PUBLIC_BASE_PATH:-""}
 
 # Check ownership before chown
 if [ -e /app/config ]; then
