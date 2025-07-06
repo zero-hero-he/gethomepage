@@ -69,7 +69,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ vars.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}
+            ${{ vars.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
             ghcr.io/${{ env.IMAGE_NAME }}
           tags: |
             # Default tags
