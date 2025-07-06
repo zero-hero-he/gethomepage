@@ -12,7 +12,7 @@ ARG CI
 ARG BUILDTIME
 ARG VERSION
 ARG REVISION
-ARG BASE_PATH
+ARG NEXT_PUBLIC_BASE_PATH
 ENV CI=$CI
 
 # Install and build only outside CI
@@ -23,7 +23,7 @@ RUN if [ "$CI" != "true" ]; then \
       NEXT_PUBLIC_BUILDTIME=$BUILDTIME \
       NEXT_PUBLIC_VERSION=$VERSION \
       NEXT_PUBLIC_REVISION=$REVISION \
-      NEXT_PUBLIC_BASE_PATH=$BASE_PATH \
+      NEXT_PUBLIC_BASE_PATH=$NEXT_PUBLIC_BASE_PATH \
       pnpm run build; \
     else \
       echo "✅ Using prebuilt app from CI context"; \
